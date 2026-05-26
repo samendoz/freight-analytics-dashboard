@@ -1,0 +1,101 @@
+id,created_at,mc_number,carrier_name,load_origin,load_destination,listed_price,agreed_price,negotiation_rounds,outcome,call_outcome_class,carrier_sentiment,call_duration,session_id
+1,2026-05-26T02:57:58.256Z,12320,"PVS LOGISTICS INC","Houston, TX","New Orleans, LA",1150,1437.5,1,accepted,load_accepted,neutral,186,6ffe0dd4-e51d-4155-b7a3-d6461b89a63a
+2,2026-05-26T03:12:45.112Z,84532,"TITAN FREIGHT SYSTEMS","Chicago, IL","Atlanta, GA",2100,2250.0,2,accepted,load_accepted,positive,210,a1b2c3d4-e5f6-47a8-b9c0-112233445566
+3,2026-05-26T03:25:19.843Z,90124,"BLUE STREAK EXPRESS","Miami, FL","New York, NY",3900,0.0,3,rejected,price_rejected,frustrated,145,b2c3d4e5-f6a7-48b9-c0d1-223344556677
+4,2026-05-26T03:40:02.015Z,11205,"A&M TRANSPORT LLC","Seattle, WA","Denver, CO",2800,2800.0,0,accepted,load_accepted,positive,95,c3d4e5f6-a7b8-49c9-d0e1-334455667788
+5,2026-05-26T03:58:34.678Z,55431,"RED LINE HAULERS","Dallas, TX","Phoenix, AZ",2200,2400.0,2,accepted,load_accepted,neutral,175,d4e5f6a7-b8c9-4ad0-e1f2-445566778899
+6,2026-05-26T04:10:12.441Z,00000,"UNKNOWN CARRIER","Los Angeles, CA","Las Vegas, NV",900,0.0,0,rejected,invalid_mc,neutral,45,e5f6a7b8-c9d0-4be1-f2a3-556677889900
+7,2026-05-26T04:22:55.302Z,67129,"CROSS COUNTRY CARGO","Atlanta, GA","Charlotte, NC",850,925.0,1,accepted,load_accepted,positive,130,f6a7b8c9-d0e1-4cf2-a3b4-667788990011
+8,2026-05-26T04:35:18.119Z,33412,"MIDWEST REEFER LOGISTICS","Philadelphia, PA","Columbus, OH",1600,0.0,3,rejected,price_rejected,frustrated,190,a7b8c9d0-e1f2-4df3-b4c5-778899001122
+9,2026-05-26T04:48:40.954Z,44510,"SWIFT RUNNER TRUCKING","Nashville, TN","St. Louis, MO",1100,1100.0,0,accepted,load_accepted,neutral,88,b8c9d0e1-f2a3-4ef4-c5d6-889900112233
+10,2026-05-26T05:02:11.230Z,99281,"APEX HAULING CORP","Kansas City, MO","Indianapolis, IN",1400,1550.0,1,accepted,load_accepted,positive,142,c9d0e1f2-a3b4-4fa5-d6e7-990011223344
+11,2026-05-26T05:15:33.612Z,10934,"LONE STAR TRUCKING","Memphis, TN","New Orleans, LA",1350,1500.0,2,accepted,load_accepted,neutral,165,d0e1f2a3-b4c5-40a6-e7f8-001122334455
+12,2026-05-26T05:30:01.445Z,55167,"INTEGRITY FREIGHT","Cincinnati, OH","Minneapolis, MN",2100,2100.0,0,accepted,load_accepted,positive,90,e1f2a3b4-c5d6-41b7-f8a9-112233445566
+13,2026-05-26T05:45:22.890Z,88321,"PACIFIC CARGO LLC","Salt Lake City, UT","San Francisco, CA",1950,0.0,1,rejected,no_equipment_match,neutral,75,f2a3b4c5-d6e7-42c8-a9b0-223344556677
+14,2026-05-26T06:01:10.556Z,22490,"BEACON LOGISTICS","Boston, MA","Baltimore, MD",1200,1350.0,2,accepted,load_accepted,positive,182,a3b4c5d6-e7f8-43d9-b0c1-334455667788
+15,2026-05-26T06:14:44.219Z,77104,"MOTOR CITY TRANSPORT","Detroit, MI","Louisville, KY",1150,0.0,3,rejected,price_rejected,frustrated,215,b4c5d6e7-f8a9-44ea-b1c2-445566778899
+16,2026-05-26T06:28:19.002Z,66231,"NORTHLAND EXPRESS","Cleveland, OH","Milwaukee, WI",1300,1300.0,0,accepted,load_accepted,neutral,98,c5d6e7f8-a9b0-45f1-c2d3-556677889900
+17,2026-05-26T06:42:50.314Z,44129,"DESERT WEST REEFERS","Phoenix, AZ","San Antonio, TX",2300,2500.0,1,accepted,load_accepted,positive,150,d6e7f8a9-b0c1-46f2-d3e4-667788990011
+18,2026-05-26T06:57:12.781Z,15492,"CASCADE FREIGHTWAYS","Portland, OR","Boise, ID",1400,1525.0,2,accepted,load_accepted,neutral,160,e7f8a9b0-c1d2-47f3-e4f5-778899001122
+19,2026-05-26T07:11:05.109Z,38210,"IRONCLAD TRUCKING","Pittsburgh, PA","Richmond, VA",1050,1050.0,0,accepted,load_accepted,positive,82,f8a9b0c1-d2e3-48f4-f5a6-889900112233
+20,2026-05-26T07:25:44.662Z,99105,"HOOSIER HAULERS","Indianapolis, IN","Omaha, NE",1650,1800.0,2,accepted,load_accepted,neutral,172,a9b0c1d2-e3f4-49f5-a6b7-990011223344
+21,2026-05-26T07:40:18.295Z,54210,"SOONER EXPRESS","Oklahoma City, OK","El Paso, TX",1800,0.0,3,rejected,price_rejected,frustrated,202,b0c1d2e3-f4a5-4af6-b7c8-001122334455
+22,2026-05-26T07:54:55.911Z,12943,"QUEEN CITY LOGISTICS","Charlotte, NC","Jacksonville, FL",1250,1325.0,1,accepted,load_accepted,positive,124,c1d2e3f4-a5b6-4bf7-c8d9-112233445566
+23,2026-05-26T08:10:30.402Z,66521,"GATEWAY REEFERS","St. Louis, MO","Birmingham, AL",1700,1700.0,0,accepted,load_accepted,neutral,85,d2e3f4a5-b6c7-4cf8-d9e0-223344556677
+24,2026-05-26T08:24:12.885Z,44102,"MILE HIGH CARGO","Denver, CO","Albuquerque, NM",1350,1475.0,2,accepted,load_accepted,positive,166,e3f4a5b6-c7d8-4df9-e0f1-334455667788
+25,2026-05-26T08:38:59.143Z,88432,"BLUEGRASS HAULERS","Louisville, KY","Little Rock, AR",1500,0.0,1,rejected,no_equipment_match,neutral,68,f4a5b6c7-d8e9-4efa-f1a2-445566778899
+26,2026-05-26T08:52:41.501Z,23901,"EMPIRE REEFER LINES","Buffalo, NY","Boston, MA",1850,2000.0,1,accepted,load_accepted,positive,138,a5b6c7d8-e9f0-4ffb-a2b3-556677889900
+27,2026-05-26T09:07:22.339Z,71294,"GOLDEN STATE CARRIERS","San Francisco, CA","Los Angeles, CA",1100,1200.0,2,accepted,load_accepted,neutral,158,b6c7d8e9-f0a1-40fc-b3c4-667788990011
+28,2026-05-26T09:21:10.012Z,00000,"UNKNOWN CARRIER","Las Vegas, NV","Salt Lake City, UT",1400,0.0,0,rejected,invalid_mc,neutral,38,c7d8e9f0-a1b2-41fd-b4c5-778899001122
+29,2026-05-26T09:35:45.991Z,33910,"TWIN CITIES TRUCKING","Minneapolis, MN","Chicago, IL",1300,1300.0,0,accepted,load_accepted,positive,92,d8e9f0a1-b2c3-42fe-b4c5-889900112233
+30,2026-05-26T09:50:33.418Z,88102,"CRESCENT CITY FLATBEDS","New Orleans, LA","Houston, TX",1100,1250.0,1,accepted,load_accepted,neutral,129,e9f0a1b2-c3d4-43ff-b5c6-990011223344
+31,2026-05-26T10:04:12.115Z,44391,"BUCKEYE LOGISTICS","Columbus, OH","Philadelphia, PA",1550,0.0,3,rejected,price_rejected,frustrated,210,f0a1b2c3-d4e3-44fa-b5c6-001122334455
+32,2026-05-26T10:19:50.884Z,55210,"BORDERLINE REEFERS","El Paso, TX","San Diego, CA",2100,2300.0,2,accepted,load_accepted,positive,178,a1b2c3d4-e4f5-45fb-b6c7-112233445566
+33,2026-05-26T10:34:01.305Z,12094,"ALAMO LOGISTICS","San Antonio, TX","Dallas, TX",800,800.0,0,accepted,load_accepted,neutral,78,b2c3d4e5-f5a6-46fc-b7c8-223344556677
+34,2026-05-26T10:48:22.771Z,77312,"OLD DOMINION HAULERS","Richmond, VA","Savannah, GA",1400,1525.0,1,accepted,load_accepted,positive,140,c3d4e5f6-a6b7-47fd-c8d9-334455667788
+35,2026-05-26T11:02:15.903Z,99104,"MONUMENTAL FREIGHT","Baltimore, MD","Pittsburgh, PA",1100,0.0,2,rejected,price_rejected,frustrated,155,d4e5f6a7-b7c8-48fe-d9e0-445566778899
+36,2026-05-26T11:17:40.451Z,23419,"BLUFF CITY EXPRESS","Memphis, TN","Kansas City, MO",1450,1450.0,0,accepted,load_accepted,neutral,89,e5f6a7b8-c8d9-49ff-e0f1-556677889900
+37,2026-05-26T11:32:11.012Z,88521,"VULCAN LOGISTICS","Birmingham, AL","Miami, FL",2400,2650.0,2,accepted,load_accepted,positive,185,f6a7b8c9-d9e0-4a00-f1f2-667788990011
+38,2026-05-26T11:46:55.332Z,45109,"GEM STATE REEFERS","Boise, ID","Seattle, WA",1500,1600.0,1,accepted,load_accepted,neutral,134,a7b8c9d0-e9e0-4a11-f2f3-778899001122
+39,2026-05-26T12:01:20.914Z,11234,"BREW CITY LOGISTICS","Milwaukee, WI","Detroit, MI",1200,0.0,1,rejected,no_equipment_match,neutral,62,b8c9d0e1-f0f1-4a22-f3f4-889900112233
+40,2026-05-26T12:15:44.801Z,66312,"DUVAL FLATBEDS","Jacksonville, FL","Nashville, TN",1650,1800.0,2,accepted,load_accepted,positive,169,c9d0e1f2-a1a2-4a33-f4f5-990011223344
+41,2026-05-26T12:30:11.234Z,44093,"ROCKY MOUNTAIN EXPRESS","Denver, CO","Salt Lake City, UT",1500,1500.0,0,accepted,load_accepted,neutral,80,d0e1f2a3-b2b3-4a44-f5f6-001122334455
+42,2026-05-26T12:45:55.612Z,99210,"CORNFREIGHT HAULERS","Omaha, NE","Kansas City, MO",750,850.0,1,accepted,load_accepted,positive,118,e1f2a3b4-c3c4-4a55-f6f7-112233445566
+43,2026-05-26T13:01:02.190Z,55102,"RAZORBACK LOGISTICS","Little Rock, AR","Oklahoma City, OK",1150,0.0,3,rejected,price_rejected,frustrated,205,f2a3b4c5-d4d5-4a66-f7f8-223344556677
+44,2026-05-26T13:14:33.456Z,10294,"DUKE CITY FREIGHT","Albuquerque, NM","Phoenix, AZ",1250,1350.0,1,accepted,load_accepted,neutral,126,a3b4c5d6-e5e6-4a77-f8f9-334455667788
+45,2026-05-26T13:28:50.002Z,77201,"PEACHSTATE TRANS","Atlanta, GA","Houston, TX",1900,2100.0,2,accepted,load_accepted,positive,170,b4c5d6e7-f6f7-4a88-f9a0-445566778899
+46,2026-05-26T13:42:12.789Z,33941,"QUEEN FREIGHT SYSTEM","Charlotte, NC","Chicago, IL",1950,1950.0,0,accepted,load_accepted,neutral,87,c5d6e7f8-a7a8-4a99-a0b1-556677889900
+47,2026-05-26T13:57:34.115Z,00000,"UNKNOWN CARRIER","Philadelphia, PA","Boston, MA",1150,0.0,0,rejected,invalid_mc,neutral,41,d6e7f8a9-b8b9-4aa0-b1c2-667788990011
+48,2026-05-26T14:11:05.662Z,88194,"PACIFIC NW REEFERS","Los Angeles, CA","Seattle, WA",3100,3400.0,3,accepted,load_accepted,positive,230,e7f8a9b0-c9ca-4ab1-b2c3-778899001122
+49,2026-05-26T14:25:59.311Z,44512,"RIVER CITY EXPRESS","St. Louis, MO","Indianapolis, IN",950,1050.0,1,accepted,load_accepted,neutral,115,f8a9b0c1-dadb-4ac2-b3c4-889900112233
+50,2026-05-26T14:40:18.402Z,12320,"PVS LOGISTICS INC","Houston, TX","New Orleans, LA",1150,1150.0,0,accepted,load_accepted,positive,76,a9b0c1d2-ebec-4ad3-b4c5-990011223344
+51,2026-05-26T14:55:12.901Z,77102,"TRI-STATE CARRIERS","Cincinnati, OH","Columbus, OH",800,900.0,1,accepted,load_accepted,positive,110,b0c1d2e3-fcfd-4ae4-b5c6-001122334455
+52,2026-05-26T15:10:44.223Z,33456,"GREAT LAKES FREIGHT","Detroit, MI","Chicago, IL",950,0.0,2,rejected,price_rejected,frustrated,148,c1d2e3f4-0102-4af5-b6c7-112233445566
+53,2026-05-26T15:24:19.005Z,88541,"DIXIE LOGISTICS","Atlanta, GA","Birmingham, AL",700,700.0,0,accepted,load_accepted,neutral,72,d2e3f4a5-1213-4bf6-c7d8-223344556677
+54,2026-05-26T15:38:50.114Z,11492,"MIDWEST TRANSIT","Kansas City, MO","St. Louis, MO",650,725.0,1,accepted,load_accepted,positive,105,e3f4a5b6-2324-4cf7-d8e9-334455667788
+55,2026-05-26T15:52:12.881Z,00000,"UNKNOWN CARRIER","Dallas, TX","Houston, TX",800,0.0,0,rejected,invalid_mc,neutral,35,f4a5b6c7-3435-4df8-e9f0-445566778899
+56,2026-05-26T16:07:33.442Z,99102,"SUNSHINE HAULERS","Miami, FL","Jacksonville, FL",1100,1250.0,2,accepted,load_accepted,positive,162,a5b6c7d8-4546-4ef9-f0a1-556677889900
+57,2026-05-26T16:21:01.009Z,44195,"TEXAS SPEEDWAY FREIGHT","El Paso, TX","San Antonio, TX",1400,1400.0,0,accepted,load_accepted,neutral,83,b6c7d8e9-5657-40fa-a1b2-667788990011
+58,2026-05-26T16:35:45.118Z,23945,"ROCKY FREIGHTWAYS","Denver, CO","Phoenix, AZ",1750,1950.0,2,accepted,load_accepted,positive,176,c7d8e9f0-6768-41fb-b2c3-778899001122
+59,2026-05-26T16:50:22.301Z,66104,"NORTHWEST LINE LLC","Seattle, WA","Portland, OR",600,0.0,1,rejected,no_equipment_match,neutral,58,d8e9f0a1-7879-42fc-b3c4-889900112233
+60,2026-05-26T17:04:11.954Z,88312,"CALI TRANSPORT INC","Los Angeles, CA","San Francisco, CA",1150,1300.0,1,accepted,load_accepted,positive,122,e9f0a1b2-8990-43fd-b4c5-990011223344
+61,2026-05-26T17:19:55.112Z,10943,"EAST COAST CARRIERS","New York, NY","Boston, MA",750,0.0,3,rejected,price_rejected,frustrated,195,f0a1b2c3-90a1-44fe-b5c6-001122334455
+62,2026-05-26T17:34:40.884Z,55162,"VALLEY FREIGHTWAY","Salt Lake City, UT","Denver, CO",1350,1350.0,0,accepted,load_accepted,neutral,81,a1b2c3d4-01b2-45ff-b6c7-112233445566
+63,2026-05-26T17:48:12.305Z,33912,"MIDWEST REEFER LOGISTICS","Chicago, IL","Minneapolis, MN",1250,1400.0,2,accepted,load_accepted,positive,155,b2c3d4e5-12c3-46fa-b7c8-223344556677
+64,2026-05-26T18:02:55.771Z,77431,"ATLANTIC EXPRESS","Charlotte, NC","Richmond, VA",950,1050.0,1,accepted,load_accepted,neutral,114,c3d4e5f6-23d4-47fb-c8d9-334455667788
+65,2026-05-26T18:17:15.903Z,99211,"COWBOY HAULERS","Oklahoma City, OK","Dallas, TX",650,0.0,2,rejected,price_rejected,frustrated,130,d4e5f6a7-34e5-48fc-d9e0-445566778899
+66,2026-05-26T18:32:40.451Z,44532,"TITAN FREIGHT SYSTEMS","Atlanta, GA","Nashville, TN",750,750.0,0,accepted,load_accepted,positive,74,e5f6a7b8-45f6-49fd-e0f1-556677889900
+67,2026-05-26T18:46:11.012Z,12345,"PIONEER LOGISTICS","Indianapolis, IN","Columbus, OH",550,625.0,1,accepted,load_accepted,neutral,98,f6a7b8c9-56a7-40fe-f1f2-667788990011
+68,2026-05-26T19:01:55.332Z,00000,"UNKNOWN CARRIER","Philadelphia, PA","Baltimore, MD",450,0.0,0,rejected,invalid_mc,neutral,33,a7b8c9d0-67b8-41ff-f2f3-778899001122
+69,2026-05-26T19:15:20.914Z,88532,"SOUTHERN TRANSPORT","New Orleans, LA","Memphis, TN",1100,1250.0,2,accepted,load_accepted,positive,164,b8c9d0e1-78c9-42fa-f3f4-889900112233
+70,2026-05-26T19:30:44.801Z,15492,"CASCADE FREIGHTWAYS","Seattle, WA","Boise, ID",1450,1450.0,0,accepted,load_accepted,neutral,90,c9d0e1f2-89d0-43fb-f4f5-990011223344
+71,2026-05-26T19:45:11.234Z,71294,"GOLDEN STATE CARRIERS","Los Angeles, CA","Phoenix, AZ",1100,1250.0,1,accepted,load_accepted,positive,120,d0e1f2a3-90e1-44fa-f5f6-001122334455
+72,2026-05-26T20:01:55.612Z,22490,"BEACON LOGISTICS","Boston, MA","New York, NY",650,0.0,1,rejected,no_equipment_match,neutral,60,e1f2a3b4-01f2-45fb-f6f7-112233445566
+73,2026-05-26T20:15:02.190Z,44129,"DESERT WEST REEFERS","Phoenix, AZ","Albuquerque, NM",1050,1150.0,1,accepted,load_accepted,positive,112,f2a3b4c5-12a3-46fc-f7f8-223344556677
+74,2026-05-26T20:30:33.456Z,66231,"NORTHLAND EXPRESS","Detroit, MI","Cleveland, OH",500,500.0,0,accepted,load_accepted,neutral,68,a3b4c5d6-23b4-47fd-f8f9-334455667788
+75,2026-05-26T20:45:50.002Z,38210,"IRONCLAD TRUCKING","Pittsburgh, PA","Columbus, OH",550,650.0,2,accepted,load_accepted,positive,135,b4c5d6e7-34c5-48ff-f9a0-445566778899
+76,2026-05-26T21:01:12.789Z,55210,"BORDERLINE REEFERS","San Diego, CA","El Paso, TX",2100,0.0,3,rejected,price_rejected,frustrated,220,c5d6e7f8-45d6-49fa-a0b1-556677889900
+77,2026-05-26T21:15:34.115Z,99105,"HOOSIER HAULERS","Chicago, IL","Indianapolis, IN",600,650.0,1,accepted,load_accepted,neutral,94,d6e7f8a9-56d6-40fb-b1c2-667788990011
+78,2026-05-26T21:30:05.662Z,11205,"A&M TRANSPORT LLC","Denver, CO","Seattle, WA",2800,3100.0,2,accepted,load_accepted,positive,180,e7f8a9b0-67f8-41fb-b2c3-778899001122
+79,2026-05-26T21:45:59.311Z,77312,"OLD DOMINION HAULERS","Richmond, VA","Charlotte, NC",750,750.0,0,accepted,load_accepted,neutral,77,f8a9b0c1-78f8-42fa-b3c4-889900112233
+80,2026-05-26T22:01:18.402Z,12943,"QUEEN CITY LOGISTICS","Atlanta, GA","Jacksonville, FL",900,1000.0,1,accepted,load_accepted,positive,116,a9b0c1d2-89f0-43fb-b4c5-990011223344
+81,2026-05-26T22:15:12.901Z,44102,"MILE HIGH CARGO","Salt Lake City, UT","Denver, CO",1350,0.0,1,rejected,no_equipment_match,neutral,65,b0c1d2e3-90f1-44fa-b5c6-001122334455
+82,2026-05-26T22:30:44.223Z,66521,"GATEWAY REEFERS","Kansas City, MO","St. Louis, MO",650,720.0,2,accepted,load_accepted,positive,140,c1d2e3f4-01f2-45fb-b6c7-112233445566
+83,2026-05-26T22:45:19.005Z,00000,"UNKNOWN CARRIER","Houston, TX","Dallas, TX",800,0.0,0,rejected,invalid_mc,neutral,39,d2e3f4a5-12f3-46fa-c7d8-223344556677
+84,2026-05-26T23:01:50.114Z,88432,"BLUEGRASS HAULERS","Louisville, KY","Cincinnati, OH",400,400.0,0,accepted,load_accepted,neutral,60,e3f4a5b6-23f4-47fb-d8e9-334455667788
+85,2026-05-26T23:15:12.881Z,23901,"EMPIRE REEFER LINES","Boston, MA","Buffalo, NY",1850,2050.0,2,accepted,load_accepted,positive,168,f4a5b6c7-34f5-4df8-e9f0-445566778899
+86,2026-05-26T23:30:33.442Z,12320,"PVS LOGISTICS INC","New Orleans, LA","Houston, TX",1100,0.0,3,rejected,price_rejected,frustrated,198,a5b6c7d8-45f6-4ef9-f0a1-556677889900
+87,2026-05-26T23:45:01.009Z,33412,"MIDWEST REEFER LOGISTICS","Columbus, OH","Chicago, IL",1050,1150.0,1,accepted,load_accepted,neutral,108,b6c7d8e9-56f0-40fa-a1b2-667788990011
+88,2026-05-26T23:59:45.118Z,99281,"APEX HAULING CORP","Indianapolis, IN","Chicago, IL",850,850.0,0,accepted,load_accepted,positive,79,c7d8e9f0-67a1-41fb-b2c3-778899001122
+89,2026-05-27T00:15:22.301Z,10934,"LONE STAR TRUCKING","Houston, TX","San Antonio, TX",750,850.0,1,accepted,load_accepted,neutral,112,d8e9f0a1-78b2-42fc-b3c4-889900112233
+90,2026-05-27T00:30:11.954Z,55167,"INTEGRITY FREIGHT","Minneapolis, MN","Chicago, IL",1300,0.0,2,rejected,price_rejected,frustrated,145,e9f0a1b2-89c3-43fd-b4c5-990011223344
+91,2026-05-27T00:45:55.112Z,88321,"PACIFIC CARGO LLC","San Francisco, CA","Salt Lake City, UT",1950,2150.0,2,accepted,load_accepted,positive,175,f0a1b2c3-90d4-44fe-b5c6-001122334455
+92,2026-05-27T01:00:40.884Z,44510,"SWIFT RUNNER TRUCKING","St. Louis, MO","Kansas City, MO",850,850.0,0,accepted,load_accepted,neutral,84,a1b2c3d4-01e5-45ff-b6c7-112233445566
+93,2026-05-27T01:15:12.305Z,33456,"GREAT LAKES FREIGHT","Chicago, IL","Detroit, MI",950,1050.0,1,accepted,load_accepted,positive,110,b2c3d4e5-12f6-46fa-b7c8-223344556677
+94,2026-05-27T01:30:55.771Z,67129,"CROSS COUNTRY CARGO","Charlotte, NC","Atlanta, GA",850,0.0,1,rejected,no_equipment_match,neutral,64,c3d4e5f6-23a7-47fb-c8d9-334455667788
+95,2026-05-27T01:45:15.903Z,55431,"RED LINE HAULERS","Phoenix, AZ","Dallas, TX",2200,2400.0,2,accepted,load_accepted,positive,168,d4e5f6a7-34b8-48fc-d9e0-445566778899
+96,2026-05-27T02:00:40.451Z,11205,"A&M TRANSPORT LLC","Denver, CO","Seattle, WA",2800,2800.0,0,accepted,load_accepted,neutral,88,e5f6a7b8-45c9-49fd-e0f1-556677889900
+97,2026-05-27T02:15:11.012Z,84532,"TITAN FREIGHT SYSTEMS","Atlanta, GA","Chicago, IL",2100,2300.0,1,accepted,load_accepted,positive,132,f6a7b8c9-56d0-40fe-f1f2-667788990011
+98,2026-05-27T02:30:55.332Z,00000,"UNKNOWN CARRIER","New York, NY","Miami, FL",3900,0.0,0,rejected,invalid_mc,neutral,43,a7b8c9d0-67e1-41ff-f2f3-778899001122
+99,2026-05-27T02:45:20.914Z,12320,"PVS LOGISTICS INC","New Orleans, LA","Houston, TX",1100,1250.0,2,accepted,load_accepted,positive,158,b8c9d0e1-78f2-42fa-f3f4-889900112233
+100,2026-05-27T03:00:44.801Z,90124,"BLUE STREAK EXPRESS","New York, NY","Miami, FL",3900,0.0,3,rejected,price_rejected,frustrated,212,c9d0e1f2-89a3-43fb-f4f5-990011223344
