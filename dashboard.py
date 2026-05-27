@@ -11,7 +11,6 @@ load_dotenv()
 # Fetches data from CSV file
 @st.cache_data
 def load_simulated_data():
-    # Asegúrate de usar el nombre correcto del archivo generado
     df_csv = pd.read_csv("call_history.csv")
     df_csv["created_at"] = pd.to_datetime(df_csv["created_at"])
     return df_csv
@@ -26,35 +25,37 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Styling
+# Styling using native Streamlit CSS Variables for dynamic Light/Dark mode
 st.markdown("""
     <style>
-    .main { background-color: #f8f9fa; }
+    .main { 
+        background-color: var(--background-color); 
+    }
     .metric-box {
-        background-color: #ffffff;
+        background-color: var(--secondary-background-color);
+        color: var(--text-color);
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         margin-bottom: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.2);
     }
-            
     </style>
 """, unsafe_allow_html=True)
 
 st.sidebar.image("https://cdn-icons-png.flaticon.com/512/3065/3065440.png", width=80)
-st.sidebar.title("Control de Operaciones")
-st.sidebar.markdown("Filtros de Auditoría")
+st.sidebar.title("Dashboard Filters")
 
 # Origin and Sentiment Filters
 origin_list = st.sidebar.multiselect(
-    "Origen de la Carga", 
+    "Load Origin", 
     options=df["load_origin"].unique(), 
     default=df["load_origin"].unique()
 )
 
 df["carrier_sentiment"] = df["carrier_sentiment"].str.capitalize()
 sentiment_list = st.sidebar.multiselect(
-    "Sentimiento del Carrier", 
+    "Carrier Sentiment", 
     options=df["carrier_sentiment"].unique(), 
     default=df["carrier_sentiment"].unique()
 )
@@ -67,7 +68,7 @@ df_filtered = df[
 
 # Dashboard Header
 st.title("📊 Load Carrier Dashboard - Acme Logistics")
-st.markdown("Análisis avanzado de rendimiento, conversión y rendimiento financiero de embudos inbound.")
+st.markdown("Welcome to Acme Logistics' Load Carrier Dashboard. ")
 st.markdown("---")
 
 # Analytics
@@ -87,7 +88,7 @@ brokerage_variance = booked_calls["agreed_price"] - booked_calls["listed_price"]
 total_variance = brokerage_variance.sum()
 avg_rounds = booked_calls["negotiation_rounds"].mean() if total_booked > 0 else 0.0
 
-# Render KPIs as cards. Make all cards match the highest height for a uniform look
+# Render KPIs as cards.
 kpi1, kpi2, kpi3, kpi4, kpi5 = st.columns(5)
 with kpi1:
     st.markdown(f'<div class="metric-box"><h4>📈 Conversion Rate</h4><h2>{conversion_rate:.1f}%</h2></div>', unsafe_allow_html=True)
@@ -96,32 +97,20 @@ with kpi2:
 with kpi3:
     st.markdown(f'<div class="metric-box"><h4>💵 Expected Revenue</h4><h2>${expected_revenue:,.2f} USD</h2></div>', unsafe_allow_html=True)
 with kpi4:
-    # Mostramos el delta financiero total de la operación
     st.markdown(f'<div class="metric-box"><h4>💰 Financial Delta</h4><h2>${total_variance:,.2f} USD</h2></div>', unsafe_allow_html=True)
 with kpi5:
     st.markdown(f'<div class="metric-box"><h4>🔄 Avg. Negotiation Rounds</h4><h2>{avg_rounds:.1f} prom.</h2></div>', unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
 
-# 6. Visualizaciones Gráficas con Plotly
+# Visualizaciones Gráficas con Plotly
 col_left, col_right = st.columns(2)
 
 with col_left:
     st.subheader("🎯 Number of calls per Class")
     
-    #Commented because test data does not reflect an actual funnel
     outcome_counts = df_filtered["call_outcome_class"].value_counts().reset_index()
     outcome_counts.columns = ["Outcome Class", "Count"]
     
-    # fig_funnel = go.Figure(go.Funnel(
-    #     y=outcome_counts["Outcome Class"],
-    #     x=outcome_counts["Count"],
-    #     textinfo="value",
-    #     marker={"color": ["#2ebd59", "#3498db", "#e74c3c", "#95a5a6"]}
-    # ))
-    # fig_funnel.update_layout(margin=dict(l=20, r=20, t=20, b=20), height=300)
-    # st.plotly_chart(fig_funnel, use_container_width=True)
-
-    #make a bar chart for the different outcome classes
     total = outcome_counts["Count"].sum()
     outcome_counts["Percentage"] = (outcome_counts["Count"] / total * 100).round(1).astype(str) + "%"
 
@@ -131,9 +120,18 @@ with col_left:
         y="Outcome Class",
         orientation="h",
         text="Percentage",
-        labels={"Count": "Number of Calls", "Outcome Class": "Call Outcome"}
+        labels={"Count": "Number of Calls", "Outcome Class": "Call Outcome"},
+        template="plotly_white"  # Let dynamic styling overwrite background components
     )
-    fig_bar.update_layout(margin=dict(l=20, r=20, t=20, b=20), height=300)
+    
+    # Update layout to make background transparent so it matches light/dark themes natively
+    fig_bar.update_layout(
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(color="rgba(128,128,128,1)"), # Neutral gray font for labels
+        margin=dict(l=20, r=20, t=20, b=20), 
+        height=300
+    )
     st.plotly_chart(fig_bar, use_container_width=True)
 
 with col_right:
@@ -145,24 +143,33 @@ with col_right:
         y="negotiation_rounds",
         color="carrier_sentiment",
         labels={"carrier_sentiment": "Carrier Sentiment", "negotiation_rounds": "Negotiation Rounds"},
-        color_discrete_map={"Positive": "#2ebd59", "Neutral": "#f1c40f", "Frustrated": "#e74c3c"}
+        # Adjusted colors slightly to remain highly legible on both dark and light backgrounds
+        color_discrete_map={"Positive": "#2ebd59", "Neutral": "#f1c40f", "Frustrated": "#e84118"}
     )
-    fig_scatter.update_layout(showlegend=False, margin=dict(l=20, r=20, t=20, b=20), height=300)
+    
+    # Update layout to make background transparent
+    fig_scatter.update_layout(
+        showlegend=False, 
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(color="rgba(128,128,128,1)"),
+        margin=dict(l=20, r=20, t=20, b=20), 
+        height=300
+    )
     st.plotly_chart(fig_scatter, use_container_width=True)
 
 st.markdown("---")
 
-#  Call hisotry Table
+# Call history Table
 st.subheader("📝 Call History Records")
 
-# Formatting the DataFrame for better readability in the table
+# Formatting the DataFrame
 formatted_df = df_filtered.copy()
 formatted_df["listed_price"] = formatted_df["listed_price"].map("${:,.2f}".format)
 formatted_df["agreed_price"] = formatted_df["agreed_price"].map("${:,.2f}".format)
 formatted_df["created_at"] = formatted_df["created_at"].dt.strftime('%Y-%m-%d %H:%M')
 formatted_df["call_duration"] = formatted_df["call_duration"].map("{:,} seg".format)
 
-# Column order mapping
 columns_to_show = [
     "id", "created_at", "mc_number", "carrier_name", 
     "load_origin", "load_destination", "listed_price", 
@@ -170,6 +177,7 @@ columns_to_show = [
     "carrier_sentiment", "call_duration"
 ]
 
+# st.dataframe natively handles theme switching
 st.dataframe(
     formatted_df[columns_to_show],
     use_container_width=True,
